@@ -3,6 +3,7 @@
 import struct
 import bson
 import sys
+#import pymongo
 
 '''
 valid bson physical format: int32 e_list 0x00
@@ -40,6 +41,8 @@ def next_removed(data, start, size):
     return -1
 
 
+#connection = pymongo.Connection('localhost', 27017)
+ 
 if __name__ == '__main__':
 
     DOCUMENT_MAX_SIZE = 1024*10
@@ -67,7 +70,7 @@ if __name__ == '__main__':
 
                 if doc != None:
                     print doc
-                    # TODO: collection.insert(doc), save document here
+                    # connection.foo_db.foo_collection.insert(doc)
                     break
             k -= 1
 
