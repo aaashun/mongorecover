@@ -1,0 +1,11 @@
+This is a simple tool for recovering deleted bson document from mongodb's db file
+
+if you execute db.collection.remove() mistakenly, you can try this tool to recover the deleted records.
+
+the following is the recommended steps:
+    1. shutdown mongodb quickly
+    2. copy the db files(e.g /data/db/xxx.3) to a safe directory
+    3. execute mongorecover
+        python ./mongorecover.py {safe-directory}/xxx.3
+
+this program has saved me, hope it works for you
