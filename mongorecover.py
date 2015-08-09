@@ -40,7 +40,6 @@ def next_removed(data, start, size):
 
     return -1
 
-
 #connection = pymongo.Connection('localhost', 27017)
  
 if __name__ == '__main__':
